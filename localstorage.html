@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>enter name</title>
+</head>
+<body>
+<h1>enter name</h1>
+your name &nbsp
+<input type="input" id="result">
+<a href="test.html" onclick="fire()">click here</a>
+</body>
+
+
+<script>
+fire=()=>{
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("name",document.getElementById("result").value );
+   
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+</script>
+</html>
